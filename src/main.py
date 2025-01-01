@@ -39,7 +39,7 @@ with gr.Blocks(title="LanguageMentor 英语私教") as language_mentor_app:
     with gr.Tab("对话练习"):
         gr.Markdown("## 练习英语对话 ")
         conversation_chatbot = gr.Chatbot(
-            placeholder="<strong>你的英语私教 DjangoPeng</strong><br><br>想和我聊什么话题都可以，记得用英语哦！",
+            placeholder="<strong>你的英语私教 Ling</strong><br><br>想和我聊什么话题都可以，记得用英语哦！",
             height=800,
         )
 
@@ -56,7 +56,7 @@ with gr.Blocks(title="LanguageMentor 英语私教") as language_mentor_app:
         gr.Markdown("## 选择一个场景学习并完成任务")
         scenario_dropdown = gr.Dropdown(choices=["求职面试", "酒店入住", "薪资谈判", "租房"], label="选择场景")
         scenario_chatbot = gr.Chatbot(
-            placeholder="<strong>你的英语私教 DjangoPeng</strong><br><br>选择场景后开始对话吧！",
+            placeholder="<strong>你的英语私教 Ling</strong><br><br>选择场景后开始对话吧！",
             height=800,
         )
         
