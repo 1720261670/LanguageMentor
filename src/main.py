@@ -42,15 +42,16 @@ with gr.Blocks(title="LanguageMentor 英语私教") as language_mentor_app:
             choices=[
                 ("求职面试", "job_interview"),  # 求职面试选项
                 ("酒店入住", "hotel_checkin"),  # 酒店入住选项
-                # ("薪资谈判", "salary_negotiation"),  # 薪资谈判选项（注释掉）
-                # ("租房", "renting")  # 租房选项（注释掉）
+                ("薪资谈判", "salary_negotiation"),  # 薪资谈判选项（注释掉）
+                # ("租房", "renting"),  # 租房选项（注释掉）
+                ("机场托运", "airport_check-in")
             ], 
             label="场景"  # 单选框标签
         )
 
         scenario_intro = gr.Markdown()  # 场景介绍文本组件
         scenario_chatbot = gr.Chatbot(
-            placeholder="<strong>你的英语私教 DjangoPeng</strong><br><br>选择场景后开始对话吧！",  # 聊天机器人的占位符
+            placeholder="<strong>你的英语私教 Ling</strong><br><br>选择场景后开始对话吧！",  # 聊天机器人的占位符
             height=600,  # 聊天窗口高度
         )
 
@@ -84,7 +85,7 @@ with gr.Blocks(title="LanguageMentor 英语私教") as language_mentor_app:
     with gr.Tab("对话练习"):  # 对话练习标签
         gr.Markdown("## 练习英语对话 ")  # 对话练习说明
         conversation_chatbot = gr.Chatbot(
-            placeholder="<strong>你的英语私教 DjangoPeng</strong><br><br>想和我聊什么话题都可以，记得用英语哦！",  # 聊天机器人的占位符
+            placeholder="<strong>你的英语私教 Ling</strong><br><br>想和我聊什么话题都可以，记得用英语哦！",  # 聊天机器人的占位符
             height=800,  # 聊天窗口高度
         )
 
@@ -99,4 +100,4 @@ with gr.Blocks(title="LanguageMentor 英语私教") as language_mentor_app:
 
 # 启动应用
 if __name__ == "__main__":
-    language_mentor_app.launch(share=True, server_name="0.0.0.0")  # 启动 Gradio 应用并共享
+    language_mentor_app.launch(share=True, server_name="localhost")  # 启动 Gradio 应用并共享

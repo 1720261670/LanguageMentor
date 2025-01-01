@@ -7,8 +7,10 @@ from langchain_core.messages import HumanMessage, AIMessage  # 导入人类消�
 from langchain_core.runnables.history import RunnableWithMessageHistory  # 导入带有消息历史的可运行类
 
 from .session_history import get_session_history  # 导入会话历史相关方法
-from utils.logger import LOG
-
+from src.utils.logger import LOG
+from langchain_openai import ChatOpenAI
+import os
+api_key = os.getenv("OPENAI_API_KEY")
 class ScenarioAgent:
     def __init__(self, scenario_name):
         self.name = scenario_name
@@ -45,11 +47,12 @@ class ScenarioAgent:
             ])
 
             # 初始化 ChatOllama 模型，配置模型参数
-            self.chatbot = system_prompt | ChatOllama(
-                model="llama3.1:8b-instruct-q8_0",  # 使用的模型名称
-                max_tokens=8192,  # 最大生成的token数
-                temperature=0.8,  # 生成文本的随机性
-            )
+            self.chatbot = system_prompt | ChatOpenAI(openai_api_key=api_key, model="gpt-4o-mini")
+            # self.chatbot = system_prompt | ChatOllama(
+            #     model="llama3.1:8b-instruct-q8_0",  # 使用的模型名称
+            #     max_tokens=8192,  # 最大生成的token数
+            #     temperature=0.8,  # 生成文本的随机性
+            # )
 
             # 将聊天机器人与消息历史记录关联起来
             self.chatbot_with_history = RunnableWithMessageHistory(self.chatbot, get_session_history)
