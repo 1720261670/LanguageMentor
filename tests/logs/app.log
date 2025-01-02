@@ -1,0 +1,15 @@
+2025-01-02 11:08:04 | DEBUG | agent_base:chat_with_history:89 - [ChatBot][TestAgent] Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?
+2025-01-02 11:09:56 | DEBUG | agent_base:chat_with_history:89 - [ChatBot][TestAgent] Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?
+2025-01-02 11:11:41 | DEBUG | agent_base:chat_with_history:89 - [ChatBot][TestAgent] Hello! I'm just a program, but I'm here and ready to help you. How can I assist you today?
+2025-01-02 11:13:34 | DEBUG | agent_base:chat_with_history:89 - [ChatBot][TestAgent] Hello! I'm just a computer program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?
+2025-01-02 11:14:44 | DEBUG | agent_base:chat_with_history:89 - [ChatBot][TestAgent] Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?
+2025-01-02 11:17:22 | DEBUG | scenario_agent:start_new_session:38 - [history][test_session]:<MagicMock id='2676905098544'>
+2025-01-02 11:19:40 | DEBUG | scenario_agent:start_new_session:38 - [history][test_session]:<MagicMock id='2622161513392'>
+2025-01-02 11:19:40 | DEBUG | scenario_agent:start_new_session:38 - [history][test_session]:<MagicMock id='2622161330912'>
+2025-01-02 11:21:17 | DEBUG | vocab_agent:restart_session:39 - [history][test_session]:<MagicMock id='2899262290192'>
+2025-01-02 11:21:17 | DEBUG | vocab_agent:restart_session:39 - [history][vocab_study]:<MagicMock id='2899262320160'>
+2025-01-02 11:21:34 | DEBUG | agent_base:chat_with_history:89 - [ChatBot][TestAgent] Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?
+2025-01-02 11:21:34 | DEBUG | scenario_agent:start_new_session:38 - [history][test_session]:<MagicMock id='1818128981968'>
+2025-01-02 11:21:34 | DEBUG | scenario_agent:start_new_session:38 - [history][test_session]:<MagicMock id='1818139694272'>
+2025-01-02 11:21:34 | DEBUG | vocab_agent:restart_session:39 - [history][test_session]:<MagicMock id='1818140034336'>
+2025-01-02 11:21:35 | DEBUG | vocab_agent:restart_session:39 - [history][vocab_study]:<MagicMock id='1818156917376'>
