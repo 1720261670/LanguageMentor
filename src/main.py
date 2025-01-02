@@ -10,8 +10,9 @@ conversation_agent = ConversationAgent()
 agents = {
     "job_interview": ScenarioAgent("job_interview"),  # 求职面试场景代理
     "hotel_checkin": ScenarioAgent("hotel_checkin"),  # 酒店入住场景代理
-    # "salary_negotiation": ScenarioAgent("salary_negotiation"),  # 薪资谈判场景代理（注释掉）
+    "salary_negotiation": ScenarioAgent("salary_negotiation"),  # 薪资谈判场景代理（注释掉）
     # "renting": ScenarioAgent("renting")  # 租房场景代理（注释掉）
+    "airport_check-in": ScenarioAgent("airport_check-in") # 机场托运
 }
 
 # 处理用户对话的函数
@@ -22,7 +23,7 @@ def handle_conversation(user_input, chat_history):
 
 # 获取场景介绍的函数
 def get_scenario_intro(scenario):
-    with open(f"content/page/{scenario}.md", "r") as file:  # 打开对应场景的介绍文件
+    with open(f"content/page/{scenario}.md", "r", encoding="utf-8") as file:  # 打开对应场景的介绍文件
         scenario_intro = file.read().strip()  # 读取文件内容并去除多余空白
     return scenario_intro  # 返回场景介绍内容
 
